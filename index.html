@@ -160,7 +160,7 @@ body.shield #shieldMsg{display:grid}
     <label>Логин<input id="loginUser" required></label>
     <label>Сыр сөз<input id="loginPass" type="password" required></label>
     <button class="btn primary block">Кирүү</button>
-    <p class="hint">Демо: <b>user / user123</b> · <b>admin / admin123</b></p>
+    <p class="hint">Демо: <b>ATK:</b>  <b>Абдурасул Д.</b></p>
     <p class="secure">🔒 Secure Document System</p>
   </form>
 </section>
@@ -221,7 +221,7 @@ const CONFIG = {
     admin: { hash: '240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9', role: 'admin' },
     user:  { hash: 'e606e38b0d8c19b24cf0ee3808183162ea7cd63ff7912dbb22b5e803286b4446', role: 'viewer' }
   },
-  adminCodeHash: 'ac1b697d502d7cdb8f5c0e1dbcb8fa62e347fdd187acc96d50f4585f5c0c9590',
+  adminCodeHash: '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4',
   maxFileMB: 10,
   allowed: ['application/pdf', 'image/jpeg', 'image/png'],
   docTypes: ['Паспорт', 'Туулгандыгы тууралуу күбөлүк', 'Диплом', 'Сертификат', 'Арыз', 'Келишим', 'Сүрөт', 'Башка'],
@@ -327,7 +327,7 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal()
 
 // Admin Code сурамы: туура болсо гана callback чакырылат
 function askCode(cb) {
-  openModal(`<h3>🔐 Администратордун коду</h3><p class="rasul">Администратордун кодун киргизиңиз</p>
+  openModal(`<h3>🔐 Администратордун коду</h3><p class="muted">Администратордун кодун киргизиңиз</p>
     <input id="acode" type="password" placeholder="______________" autofocus>
     <div class="modal-foot"><button class="btn" onclick="closeModal()">Жок</button><button class="btn primary" id="acOk">Текшерүү</button></div>`);
   const go = async () => {
